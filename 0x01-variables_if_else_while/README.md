@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>0x01. C - Variables, if, else, while</title>
-</head>
 
 <body>
 	<h1>0x01. C - Variables, if, else, while</h1>
 	<hr>
+	<h2>Tasks</h2>
 	<section>
 		<h3>0. Positive anything is better than negative nothing</h3>
 		<p> 
@@ -31,8 +29,8 @@
 		</ul>
 	</section>
 
-	<h2>Tasks</h2>
-
 </body>
 
 </html>
+
+
