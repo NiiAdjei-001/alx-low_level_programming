@@ -3,10 +3,11 @@
 /* more headers goes there */
 #include <stdio.h>
 
-/*
- * main - Start code
+/**
+ * main - Entry code
+ *
  * Return: 0 (Succcess)
- * */
+ */
 int main(void)
 {
 	int n;
