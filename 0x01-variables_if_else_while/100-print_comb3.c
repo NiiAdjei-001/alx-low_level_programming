@@ -12,14 +12,18 @@ int main(void)
 
 	for (i = 48; i < 58; i++)
 	{
-		for (j = 48; j < 58; j++){
-			if (i >= j){
+		for (j = 48; j < 58; j++)
+		{
+			if (i >= j)
+			{
 				;
-			} 
-			else{
+			}
+			else
+			{
 				putchar(i);
 				putchar(j);
-				if((i + 1) < 57){
+				if((i + 1) < 57)
+				{
 					putchar(',');
 					putchar(' ');
 				}
