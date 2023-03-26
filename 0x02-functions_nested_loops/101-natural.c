@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * natural - Sums multiples of 3 or 5 from 1 to 1024(excluded)
- *
+ * main- entry point
+ * Return: Always return 0.
  */
-void natural(void)
+int main(void)
 {
 	int i, sum;
 
@@ -20,4 +20,5 @@ void natural(void)
 		i++;
 	}
 	printf("%d\n",sum);
+	return (0);
 }

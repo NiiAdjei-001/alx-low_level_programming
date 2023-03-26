@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * fibonacci - Print out the first 50  fibonacci numbers
- *
+ * main - entry point
+ * Return: Always return 0.
  */
-void fibonacci(void)
+int main(void)
 {
 	unsigned int n1, n2, temp, i;
 
@@ -21,4 +21,5 @@ void fibonacci(void)
 		i++;
 	}
 	printf("\n");
+	return (0);
 }
