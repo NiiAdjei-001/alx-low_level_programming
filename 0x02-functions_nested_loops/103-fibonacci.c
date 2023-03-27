@@ -6,28 +6,21 @@
  */
 int main(void)
 {
-	int i;
-	long n1, n2, temp;
+	long n1, n2, temp, sum;
 
-	i = 0;
 	n1 = 1;
 	n2 = 2;
-	printf("%ld, %ld, ", n1, n2);
-	while (i < 48)
+	sum = n2;
+	while (n2 < 4000000)
 	{
 		temp = n1 + n2;
 		n1 = n2;
 		n2 = temp;
-		if (i == 47)
+		if ((n2 % 2) == 0)
 		{
-			printf("%ld", temp);
+			sum += n2;
 		}
-		else
-		{
-			printf("%ld, ", temp);
-		}
-		i++;
 	}
-	printf("\n");
+	printf("%ld\n", sum);
 	return (0);
 }
