@@ -1,5 +1,5 @@
 #include "main.h"
-/*
+/**
  * reset_to_98- Updates an integer address with a value 98.
  *
  * @n: An integer pointer.

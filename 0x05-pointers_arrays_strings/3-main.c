@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Returns 0 always.
+ */
+int main(void)
+{
+	char *str;
+
+	str = "I do not fear computers. I fear the lack of the - Isaac Asimov";
+	_puts(str);
+	return (0);
+}
