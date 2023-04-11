@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * create_array - Creates a character array with a given size.
  * @size: size of array.
@@ -16,6 +17,11 @@ char *create_array(unsigned int size, char c)
 	if (size != 0)
 	{
 		array = malloc(size * sizeof(char));
+		if (array == NULL)
+		{
+			fprintf(stderr, "Not enough memory left!\n");
+			return (NULL);
+		}
 		i = 0;
 		while (i != size)
 		{
