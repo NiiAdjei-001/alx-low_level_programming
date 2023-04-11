@@ -14,19 +14,28 @@ char *_strdup(char *str)
 	char *cpy;
 
 	if (str == NULL)
-		return (NULL);
-	i = 0;
-	size = sizeof(str);
-	cpy = malloc(size);
-	if (cpy == NULL)
 	{
-		fprintf(stderr, "Not enough memory available!\n");
 		return (NULL);
 	}
-	while (i < size)
-	{
-		cpy[i] = str[i];
-		i++;
+	else
+	{	
+		i = 0;
+		size = sizeof(str);
+		cpy = malloc(size);
+		if (cpy == NULL)
+		{
+			fprintf(stderr, "Not enough memory available!\n");
+			free(cpy);
+			return (NULL);
+		}
+		else
+		{
+			while (i < size)
+			{
+				cpy[i] = str[i];
+				i++;
+			}
+			return (cpy);
+		}
 	}
-	return (cpy);
 }
