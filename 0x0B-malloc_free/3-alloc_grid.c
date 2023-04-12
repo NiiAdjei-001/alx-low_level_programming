@@ -30,7 +30,7 @@ int **alloc_grid(int width, int height)
 			if (grid[r--] == NULL)
 			{
 				fprintf(stderr, "Not enough memory available!\n");
-				while (r > 0)
+				while (r >= 0)
 				{
 					free(grid[r--]);
 				}
