@@ -6,20 +6,24 @@
 
 void print_number(int n)
 {
-	int temp, orderOfMag, neg;
+	int orderOfMag, neg;
+	unsigned int temp;
 
-	temp = n;
-	orderOfMag = 1;
-	neg = 0;
+	/**temp = n;**/
+	/**orderOfMag;**/
+	/**neg = 0;**/
 	if (n == 0)
 		_putchar('0');
 	else
 	{
+		neg = 0;
+		orderOfMag = 1;
 		if (n < 0)
 		{
 			neg = 1;
 			n *= -1;
 		}
+		temp = (unsigned int) n;
 		while (temp != 0)
 		{
 			orderOfMag *= 10;
