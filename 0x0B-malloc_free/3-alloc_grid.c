@@ -23,15 +23,21 @@ int **alloc_grid(int width, int height)
 	{
 		grid[r] = (int *) malloc(width * sizeof(int));
 	}
-	if (grid == NULL)
+	if (grid != NULL)
 	{
-		fprintf(stderr, "Not enough memory available!\n");
 		for (r = 0; r < height; r++)
 		{
-			free(grid[r]);
+			if (grid[r--] == NULL)
+			{
+				fprintf(stderr, "Not enough memory available!\n");
+				while (r > 0)
+				{
+					free(grid[r--]);
+				}
+				free(grid);
+				return (NULL);
+			}
 		}
-		free(grid);
-		return (NULL);
 	}
 	for (r = 0; r < height; r++)
 	{
