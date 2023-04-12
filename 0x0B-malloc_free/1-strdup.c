@@ -25,7 +25,7 @@ char *_strdup(char *str)
 		{
 			size++;
 		}
-		cpy = malloc(size);
+		cpy = malloc(size + 1);
 		if (cpy == NULL)
 		{
 			fprintf(stderr, "Not enough memory available!\n");
