@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 		size2++;
 	}
 	/** printf("size1: %d, size2: %d", size1, size2); --> debugging **/
-	cat = malloc(size1 + size2);
+	cat = malloc(size1 + size2 + 1);
 	if (cat == NULL)
 	{
 		fprintf(stderr, "Not enough memory available!");
