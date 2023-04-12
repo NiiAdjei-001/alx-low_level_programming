@@ -19,16 +19,12 @@ char *str_concat(char *s1, char *s2)
 	if (s1 != NULL)
 	{
 		while (s1[size1] != '\0')
-		{
 			size1++;
-		}
 	}
 	if (s2 != NULL)
 	{
 		while (s2[size2] != '\0')
-		{
 			size2++;
-		}
 	}
 	cat = malloc(size1 + size2 + 1);
 	if (cat == NULL)
@@ -41,13 +37,9 @@ char *str_concat(char *s1, char *s2)
 		while (i < (size1 + size2))
 		{
 			if (i < size1)
-			{
 				cat[i] = s1[i];
-			}
 			else
-			{
-				cat[i] = s2[i - size1]; 
-			}
+				cat[i] = s2[i - size1];
 			i++;
 		}
 		return (cat);
