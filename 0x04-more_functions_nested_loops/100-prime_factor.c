@@ -6,7 +6,7 @@
  *
  * Return: Returns 1 if prime number and 0 if not.
  */
-int is_prime(unsigned long n)
+short is_prime(unsigned long n)
 {
 	unsigned long i;
 
@@ -66,12 +66,34 @@ unsigned long largest_prime_factor(unsigned long n)
 }
 
 /**
+ * largest_prime_factor2 - gets the largest prime number a given number
+ */
+unsigned long largest_prime_factor2(unsigned long n)
+{
+	int largest;
+		
+	largest = 2;
+	while (n >= (largest * largest))
+	{
+		if (n % largest == 0)
+		{
+			n /= largest;
+		}
+		else
+		{
+			largest = next_prime(largest);
+		}
+	}
+	return (largest);
+}
+
+/**
  * main - Entry point
  *
  * Return: Always 0;
  */
 int main(void)
 {
-	printf("%ld\n", largest_prime_factor(612852475143));
+	printf("%ld\n", largest_prime_factor(1231952));
 	return (0);
 }
