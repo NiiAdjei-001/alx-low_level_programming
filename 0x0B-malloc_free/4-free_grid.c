@@ -16,14 +16,14 @@ void free_grid(int **grid, int height)
 	{
 		for (r = 0; r < height; r++)
 		{
-			if (grid[r--] == NULL)
+			if (grid[r] == NULL)
 			{
-				fprintf(stderr, "Not enough memory available!\n");
-				while (r >= 0)
+				for (r = 0; r < height; r++)
 				{
-					free(grid[r--]);
+					free(grid[r]);
 				}
 				free(grid);
+				fprintf(stderr,"Not enough memory available\n");
 				break;
 			}
 		}
