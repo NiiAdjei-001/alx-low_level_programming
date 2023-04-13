@@ -67,24 +67,22 @@ unsigned long largest_prime_factor(unsigned long n)
 
 /**
  * largest_prime_factor2 - gets the largest prime number a given number
+ * @n: number.
+ *
+ * Return: Returns largest prime factor.
  */
-unsigned long largest_prime_factor2(unsigned long n)
+unsigned long int largest_prime_factor2(unsigned long int n)
 {
 	int largest;
-		
-	largest = 2;
-	while (n >= (largest * largest))
+
+	for (largest = 3; largest < 12057; largest += 2)
 	{
-		if (n % largest == 0)
+		while (n % largest == 0 && n != largest)
 		{
 			n /= largest;
 		}
-		else
-		{
-			largest = next_prime(largest);
-		}
 	}
-	return (largest);
+	return (n);
 }
 
 /**
@@ -94,6 +92,6 @@ unsigned long largest_prime_factor2(unsigned long n)
  */
 int main(void)
 {
-	printf("%ld\n", largest_prime_factor(1231952));
+	printf("%lu\n", largest_prime_factor2(612852475143));
 	return (0);
 }
