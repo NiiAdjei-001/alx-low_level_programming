@@ -73,7 +73,7 @@ unsigned long largest_prime_factor(unsigned long n)
  */
 unsigned long int largest_prime_factor2(unsigned long int n)
 {
-	int largest;
+	unsigned long int largest;
 
 	for (largest = 3; largest < 12057; largest += 2)
 	{
