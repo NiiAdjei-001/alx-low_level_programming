@@ -7,16 +7,19 @@
  */
 short isNumber(char *str)
 {
-	int i;
-
-	for (i = 0; i < (int)sizeof(str); i++)
+	int c, size;
+	
+	for(size = 0; str[size] != '\0'; size++)
+		continue;
+	if (str[0] == '-' && size > 1 )
+		c = 1;
+	else
+		c = 0;
+	while (c < size)
 	{
-		if (str[0] == '-' || (str[0] >= '0' && str[0] <= '9'))
-			continue;
-		else if (str[i] >= '0' && str[i] <= '9')
-			continue;
-		else
+		if (!(str[c] >= '0' && str[c] <= '9'))
 			return (0);
+		c++;
 	}
 	return (1);
 }
