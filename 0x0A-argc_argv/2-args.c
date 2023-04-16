@@ -3,6 +3,7 @@
 /**
  * main - entry point
  * @argc: arguement count
+ * @argv: argument vector
  * Return: Always return 0
  */
 int main(int argc, char **argv)
