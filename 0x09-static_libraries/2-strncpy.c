@@ -1,0 +1,13 @@
+#include "main.h"
+#include <stdlib.h>
+/**
+ * _strncpy - function
+ * @dest: var 1
+ * @src: var 2
+ * @n: var 3
+ * Return: pointer
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	return (NULL);
+}
