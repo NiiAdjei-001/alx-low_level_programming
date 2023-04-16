@@ -8,10 +8,10 @@
 short isNumber(char *str)
 {
 	int c, size;
-	
-	for(size = 0; str[size] != '\0'; size++)
+
+	for (size = 0; str[size] != '\0'; size++)
 		continue;
-	if (str[0] == '-' && size > 1 )
+	if (str[0] == '-' && size > 1)
 		c = 1;
 	else
 		c = 0;
