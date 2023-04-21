@@ -12,7 +12,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *str;
 	va_list args;
 
-
 	if (separator != NULL && (n > 1))
 	{
 		i = 0;
