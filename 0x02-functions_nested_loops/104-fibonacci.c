@@ -14,9 +14,9 @@ int main(void)
 	printf("%.0Lf, %.0Lf, ", num1, num2);
 	for (i = 0; i < 96; i++)
 	{
-		temp = num2;
-		num2 = num2 + num1;
+		temp = num1 + num2;
 		num1 = num2;
+		num2 = temp;
 		printf("%.0Lf, ", temp);
 	}
 	printf("\n");
