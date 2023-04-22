@@ -12,13 +12,13 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	printf("%.0Lf, %.0Lf, ", num1, num2);
-	for (i = 0; i < 95; i++)
+	for (i = 0; i < 96; i++)
 	{
 		temp = num1 + num2;
 		num1 = num2;
-		num2 = temp;
-		printf("%.0Lf, ", temp);
+		num2 = temp;	
+		printf("%.0Lf", temp);
+		printf("%s", (i < 95)? ", ": "\n"); 
 	}
-	printf("%.0Lf\n", (num1 + num2));
 	return (0);
 }
