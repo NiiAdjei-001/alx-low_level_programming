@@ -7,11 +7,8 @@ void free_from_tail(list_t *node)
 {
 	if (node->next != NULL)
 		free_from_tail(node->next);
-	else
-	{
-		free(node);
-		return;
-	}
+	free(node);
+	return;
 }
 /**
  * free_list - clear list and release memory
