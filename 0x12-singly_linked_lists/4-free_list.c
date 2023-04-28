@@ -17,8 +17,6 @@ void free_from_tail(list_t *node)
 void free_list(list_t *head)
 {
 
-	if (head->next == NULL)
-		free(head);
-	else
+	if (head != NULL)
 		free_from_tail(head);
 }
