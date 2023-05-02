@@ -3,7 +3,7 @@
  * add_nodeint - adds a new node at the beginning of a listint_t list
  * @head: address of head node.(listint **head)
  * @n: integer value
- * Returns: returns the address of the added node.
+ * Return: returns the address of the added node.
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
@@ -13,7 +13,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	{
 		new  = malloc(sizeof(listint_t));
 		if (new == NULL)
+		{
 			return (NULL);
+		}
 		else
 		{
 			new->n = n;
@@ -25,7 +27,9 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	{
 		new = malloc(sizeof(listint_t));
 		if (new == NULL)
+		{
 			return (NULL);
+		}
 		else
 		{
 			new->n = n;
