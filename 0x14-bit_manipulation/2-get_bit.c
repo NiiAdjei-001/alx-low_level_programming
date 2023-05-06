@@ -3,7 +3,7 @@
 /**
  * get_bit - gets a binary's bit number at a given index
  * @n: unsigned long integer
- * index: index;
+ * @index: index value
  * Return: Returns the bit value at the given index.
  */
 int get_bit(unsigned long int n, unsigned int index)
