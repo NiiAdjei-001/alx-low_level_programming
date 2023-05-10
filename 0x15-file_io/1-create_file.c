@@ -7,7 +7,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fwd, writecheck = -1;
+	int fwd, writecheck = -1, count = 0;
 
 	if (!filename)
 		return (-1);
@@ -19,13 +19,13 @@ int create_file(const char *filename, char *text_content)
 		close(fwd);
 		return (1);
 	}
-	while (text_content != '\0')
+	while (*(text_content + count) != '\0')
 	{
-		writecheck = write(fwd, text_content, sizeof(char));
+		writecheck = write(fwd, (text_content + count), sizeof(char));
 		if (writecheck == -1)
 			return (-1);
-		text_content++;
+		count++;
 	}
-	close(frd);
+	close(fwd);
 	return (1);
 }
