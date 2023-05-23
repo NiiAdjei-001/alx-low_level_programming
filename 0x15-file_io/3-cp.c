@@ -45,7 +45,7 @@ void openfilesink(int *file_to_d, char **argv)
 	*file_to_d = open(argv[2], flag, mode);
 	if (*file_to_d == -1)
 	{
-		fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
+		fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 }
@@ -77,10 +77,10 @@ int main(int argc, char **argv)
 		}
 		if (readcheck == 0)
 			break;
-		writecheck = dprintf(file_to_d, "%s", buffer);
+		writecheck = write(file_to_d, buffer, readcheck);
 		if (writecheck == -1)
 		{
-			fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
+			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		free(buffer);

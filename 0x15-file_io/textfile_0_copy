@@ -20,9 +20,3 @@ order specified.  Also, the placement of the -l option is significant.
 Many options have long names starting with -f or with -W---for example, -fmove-loop-invariants, -Wformat and so on.  Most
 of these have both positive and negative forms; the negative form of -ffoo is -fno-foo.  This manual documents only one of
 these two forms, whichever one is not the default.
-y useful with
-another language (usually C++), the explanation says so explicitly.  If the description for a particular option does not
-mention a source language, you can use that option with all supported languages.
-
-The gcc program accepts options and file names as operands.  Many options have multi-letter names; therefore multiple
-single-letter options may no
