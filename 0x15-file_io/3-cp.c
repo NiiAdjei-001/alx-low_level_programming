@@ -76,6 +76,8 @@ int main(int argc, char **argv)
 			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+		free(buffer);
+		buffer = malloc(buffer_size * sizeof(char));
 		readcheck = read(file_from_d, buffer, buffer_size);
 	}
 	if (close(file_from_d) == -1)
