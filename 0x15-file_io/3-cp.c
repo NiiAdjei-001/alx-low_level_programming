@@ -64,20 +64,14 @@ int main(int argc, char **argv)
 	char *buffer;
 	int file_from_d, file_to_d;
 
-	printf("[CHECK]:: Creating buffer\n");
 	buffer = malloc(buffer_size * sizeof(char));
-	printf("[CHECK]:: Checking argument count\n");
 	checkargument(argc, argv);
-	printf("[CHECK]:: Open source file\n");
 	openfilesource(&file_from_d, argv);
-	printf("[CHECK]:: Open sink file\n");
 	openfilesink(&file_to_d, argv);
 	readcheck = read(file_from_d, buffer, buffer_size);
 	while (readcheck > 0)
 	{
-		printf("[CHECK]:: readcheck: [%ld]\n", readcheck);
 		writecheck = dprintf(file_to_d, "%s", buffer);
-		printf("[CHECK]:: writecheck: [%ld]\n", writecheck);
 		if (writecheck == -1)
 		{
 			fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
