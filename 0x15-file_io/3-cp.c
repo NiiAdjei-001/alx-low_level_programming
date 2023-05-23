@@ -5,6 +5,7 @@
 
 /**
  * checkargument - checks if 3 arguments have been passed into main.
+ * @argc: number of arguments.
  * @argv: array of arguments.
  *
  */
@@ -62,7 +63,7 @@ int main(int argc, char **argv)
 	ssize_t readcheck = 0, writecheck = 0;
 	char *buffer;
 	int file_from_d, file_to_d;
-	
+
 	printf("[CHECK]:: Creating buffer\n");
 	buffer = malloc(buffer_size * sizeof(char));
 	printf("[CHECK]:: Checking argument count\n");
@@ -72,7 +73,7 @@ int main(int argc, char **argv)
 	printf("[CHECK]:: Open sink file\n");
 	openfilesink(&file_to_d, argv);
 	readcheck = read(file_from_d, buffer, buffer_size);
-	while(readcheck > 0) 
+	while (readcheck > 0)
 	{
 		printf("[CHECK]:: readcheck: [%ld]\n", readcheck);
 		writecheck = dprintf(file_to_d, "%s", buffer);
