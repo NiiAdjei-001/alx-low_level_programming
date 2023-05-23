@@ -5,15 +5,14 @@
 
 /**
  * checkargument - checks if 3 arguments have been passed into main.
- * @argc: number of arguments.
- * @argv: array of arguments.
+ * @argc: number of arguments..
  *
  */
-void checkargument(int argc, char **argv)
+void checkargument(int argc)
 {
 	if (argc != 3)
 	{
-		fprintf(stderr, "Usage: cp %s %s\n", argv[1], argv[2]);
+		fprintf(stderr, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 }
@@ -65,7 +64,7 @@ int main(int argc, char **argv)
 	int file_from_d, file_to_d;
 
 	buffer = malloc(buffer_size * sizeof(char));
-	checkargument(argc, argv);
+	checkargument(argc);
 	openfilesource(&file_from_d, argv);
 	openfilesink(&file_to_d, argv);
 	readcheck = read(file_from_d, buffer, buffer_size);
@@ -74,7 +73,7 @@ int main(int argc, char **argv)
 		writecheck = dprintf(file_to_d, "%s", buffer);
 		if (writecheck == -1)
 		{
-			fprintf(stderr, "Error: Can't write to file %s\n", argv[2]);
+			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 		readcheck = read(file_from_d, buffer, buffer_size);
