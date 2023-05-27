@@ -1,19 +1,16 @@
 #include"main.h"
 #include <stdio.h>
 /**
- * clear_bit - sets a binary's bit number at a given index to 0
- * @n: unsigned long integer pointer
- * @index: index value
- * Return: Returns the 1 if succesful and 0 on error.
+ * clear_bit - sets bit value to 0 at a given index
+ * @n: pointer to unsigned long int
+ * @index: bit index
+ *
+ * Return: 1 success, -1 error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int bin;
-
-	if (n == NULL)
-		return (-1);
-	bin = 1;
-	bin <<= index;
-	*n |= bin;
-	return (1);
+	 if (index > (sizeof(unsigned long int) * 8 - 1))
+		   return (-1);
+	  *n = *n & ~(1 << index);
+	   return (1);
 }
