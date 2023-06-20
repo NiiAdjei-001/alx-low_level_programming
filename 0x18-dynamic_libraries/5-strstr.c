@@ -10,5 +10,6 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	return (NULL);
+	haystack = needle;
+	return (haystack);
 }

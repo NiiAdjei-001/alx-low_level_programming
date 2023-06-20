@@ -6,5 +6,7 @@
  */
 int _atoi(char *s)
 {
+	if (s)
+		return (1);
 	return (0);
 }
