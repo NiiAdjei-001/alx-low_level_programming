@@ -21,7 +21,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				found_match = 1;
 				break;
-			}	
+			}
 		}
 		if (found_match)
 			len++;
