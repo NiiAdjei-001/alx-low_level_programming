@@ -1,0 +1,13 @@
+#-*-MakeFile-*-
+#target : dependencies
+#   action
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+clean : 
+	rm school
+	rm school.o
+	rm main.o
