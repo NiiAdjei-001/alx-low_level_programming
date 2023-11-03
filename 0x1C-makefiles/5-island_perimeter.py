@@ -79,7 +79,7 @@ def check_top(grid, y, x):
     """
     global perimeter
     if y-1 < 0:
-        perimeter += 0
+        perimeter += 1
         return
     if is_land(grid, y-1, x):
         return
